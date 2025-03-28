@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover the Philippines</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(90deg, #ff9800, #ff5722);
+            padding: 30px;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            padding: 40px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>Discover the Beauty of the Philippines</header>
+    <div class="container">
+        <div class="section">
+            <h2>Rich Culture & Traditions</h2>
+            <p>Experience the vibrant traditions of Bayanihan, Harana, and Tinikling, showcasing Filipino hospitality and artistry.</p>
+            <img src="bayanihan.jpg" alt="Bayanihan">
+        </div>
+        <div class="section">
+            <h2>Delicious Filipino Cuisine</h2>
+            <p>Try the famous Halo-Halo, a refreshing dessert that perfectly represents the diverse flavors of the Philippines.</p>
+            <img src="halo-halo.jpg" alt="Halo-Halo">
+        </div>
+        <div class="section">
+            <h2>Stunning Destinations</h2>
+            <p>Explore breathtaking beaches, mountains, and historical sites that make the Philippines a top travel destination.</p>
+            <img src="beach.jpg" alt="Philippine Beach">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Discover the Philippines | Your Ultimate Travel Guide</p>
+    </footer>
+</body>
+</html>
