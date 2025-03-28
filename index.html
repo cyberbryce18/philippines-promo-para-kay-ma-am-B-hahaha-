@@ -50,9 +50,13 @@
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
             max-width: 800px;
             transition: transform 0.3s ease-in-out;
+            cursor: pointer;
         }
         .section:hover {
             transform: scale(1.05);
+        }
+        .hidden {
+            display: none;
         }
         img {
             width: 100%;
@@ -71,6 +75,12 @@
             font-size: 18px;
         }
     </style>
+    <script>
+        function toggleDetails(sectionId) {
+            var details = document.getElementById(sectionId + '-details');
+            details.classList.toggle('hidden');
+        }
+    </script>
 </head>
 <body>
     <header>Discover the Beauty of the Philippines</header>
@@ -80,20 +90,41 @@
         <a href="#destinations">Destinations</a>
     </nav>
     <div class="container">
-        <div id="culture" class="section">
+        <div id="culture" class="section" onclick="toggleDetails('culture')">
             <h2>Rich Culture & Traditions</h2>
-            <p>Experience the vibrant traditions of Bayanihan, Harana, and Tinikling, showcasing Filipino hospitality and artistry.</p>
-            <img src="bayanihan.jpg" alt="Bayanihan">
+            <p>Experience the vibrant traditions of Bayanihan, Harana, and Tinikling.</p>
+            <div id="culture-details" class="hidden">
+                <ul>
+                    <li><strong>Bayanihan:</strong> The spirit of communal unity and cooperation.</li>
+                    <li><strong>Harana:</strong> A traditional way of courtship through serenades.</li>
+                    <li><strong>Tinikling:</strong> A folk dance that mimics the movement of birds among bamboo traps.</li>
+                </ul>
+                <img src="bayanihan.jpg" alt="Bayanihan">
+            </div>
         </div>
-        <div id="cuisine" class="section">
+        <div id="cuisine" class="section" onclick="toggleDetails('cuisine')">
             <h2>Delicious Filipino Cuisine</h2>
-            <p>Try the famous Halo-Halo, a refreshing dessert that perfectly represents the diverse flavors of the Philippines.</p>
-            <img src="halo-halo.jpg" alt="Halo-Halo">
+            <p>Try the famous Halo-Halo, a refreshing dessert with diverse flavors.</p>
+            <div id="cuisine-details" class="hidden">
+                <ul>
+                    <li><strong>Ingredients:</strong> Shaved ice, sweetened beans, jellies, leche flan, and ube.</li>
+                    <li><strong>How to Enjoy:</strong> Mix everything together and savor the explosion of flavors.</li>
+                    <li><strong>Best Time to Eat:</strong> Perfect for hot summer days!</li>
+                </ul>
+                <img src="halo-halo.jpg" alt="Halo-Halo">
+            </div>
         </div>
-        <div id="destinations" class="section">
+        <div id="destinations" class="section" onclick="toggleDetails('destinations')">
             <h2>Stunning Destinations</h2>
-            <p>Explore breathtaking beaches, mountains, and historical sites that make the Philippines a top travel destination.</p>
-            <img src="beach.jpg" alt="Philippine Beach">
+            <p>Explore breathtaking beaches, mountains, and historical sites.</p>
+            <div id="destinations-details" class="hidden">
+                <ul>
+                    <li><strong>Boracay:</strong> Famous for its white sandy beaches and crystal-clear waters.</li>
+                    <li><strong>Banaue Rice Terraces:</strong> A stunning UNESCO World Heritage site.</li>
+                    <li><strong>Palawan:</strong> Home to the underground river and stunning limestone cliffs.</li>
+                </ul>
+                <img src="beach.jpg" alt="Philippine Beach">
+            </div>
         </div>
     </div>
     <footer>
